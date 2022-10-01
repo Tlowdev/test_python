@@ -1,5 +1,9 @@
-pizzas = ["pepperoni", "hawain", "cheese", "combination"]
-for pizza in pizzas:
-    print(f"I love {pizza.title()} pizza\n")
+def make_pizza(size, *toppings):
+    """Summarize a pizza were about to make"""
+    print(f"We're making a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
 
-print("Pizza is delicous!")
+make_pizza(12,'three meat', 'onion', 'bell pepper')
+make_pizza(24,'pepperoni')
+    
