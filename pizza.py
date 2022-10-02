@@ -4,6 +4,5 @@ def make_pizza(size, *toppings):
     for topping in toppings:
         print(f"- {topping}")
 
-make_pizza(12,'three meat', 'onion', 'bell pepper')
-make_pizza(24,'pepperoni')
+
     
