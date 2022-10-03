@@ -19,6 +19,13 @@ class Car:
             self.odometer = mileage
         else:
             print("You cant roll back the odometer.") 
+
+    def add_mileage(self, miles):
+        """Add given amount to odometer"""
+        if int(miles) < 0:
+            print("You cant subtract miles")
+        else:
+            self.odometer += miles
     
     def read_odometer(self):
         """Reads odometer and prints to console"""
@@ -34,3 +41,7 @@ my_car.update_odometer(10)
 #New updated odometer
 my_car.update_odometer(50000)
 my_car.read_odometer()
+#Add miles to odometer
+my_car.add_mileage(1000)
+my_car.read_odometer()
+my_car.add_mileage(-1000)
