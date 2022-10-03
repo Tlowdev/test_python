@@ -31,6 +31,18 @@ class Car:
         """Reads odometer and prints to console"""
         print(f"This car has {self.odometer} miles.")
 
+class ElectricCar(Car):
+    """Represents cars that are specifically electric"""
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery_size = 100
+    
+    def describe_battery(self):
+        """Prints statement on battery size"""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    
+
 #Make an instance of a car
 my_car = Car('honda', 'accord', 2016)
 print(my_car.car_description())
@@ -44,4 +56,11 @@ my_car.read_odometer()
 #Add miles to odometer
 my_car.add_mileage(1000)
 my_car.read_odometer()
+#Attempt to lower odometer
 my_car.add_mileage(-1000)
+#Make instance of Electric car
+my_tezi = ElectricCar('Tesla', 'Model 3', 2020)
+#Print description of my_tezi
+print(my_tezi.car_description())
+#Print Battery size
+my_tezi.describe_battery()
