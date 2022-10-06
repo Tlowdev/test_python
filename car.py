@@ -1,17 +1,17 @@
 class Car:
-    def __init__(self, make, model, year):
+    def __init__(self, make: str, model: str, year: int) -> None:
         """Initialize attributes to car"""
         self.make = make
         self.model = model
         self.year = year
-        self.odometer = 0
+        self.odometer: int = 0
 
     def car_description(self):
         """Return car description neately formatted"""
         kind = f"{self.year} {self.make} {self.model}"
         return kind.title()
     
-    def update_odometer(self, mileage):
+    def update_odometer(self, mileage: int) -> int:
         """Sets odometer to given value.
             Rejects if it attempts to roll odometer back
         """
@@ -19,13 +19,15 @@ class Car:
             self.odometer = mileage
         else:
             print("You cant roll back the odometer.") 
+        return mileage
 
-    def add_mileage(self, miles):
+    def add_mileage(self, miles: int) -> int:
         """Add given amount to odometer"""
         if int(miles) < 0:
             print("You cant subtract miles")
         else:
-            self.odometer += miles
+             self.odometer += miles
+        return miles
     
     def read_odometer(self):
         """Reads odometer and prints to console"""
@@ -35,7 +37,7 @@ class ElectricCar(Car):
     """Represents cars that are specifically electric"""
     def __init__(self, make, model, year):
         super().__init__(make, model, year)
-        self.battery_size = 100
+        self.battery_size: int = 100
     
     def describe_battery(self):
         """Prints statement on battery size"""
