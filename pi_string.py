@@ -12,12 +12,14 @@ for line in lines:
 #created a variable with my birthday (mmddyyyy)
 my_b_day = '04281990'
 
-
-if my_b_day in pi_string:
-    print('My birthday appears in the 1st million digits of pi!')
-else:
-    print('My birthday is not in pi.')
+def birthday(my_b_day):
+    if my_b_day in pi_string:
+      print('My birthday appears in the 1st million digits of pi!')
+    else:
+      print('My birthday is not in pi.')
+    
 
 
 #print(pi_string)
 print(len(pi_string))
+birthday(my_b_day)
