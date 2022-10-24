@@ -53,3 +53,16 @@ new_car = car
 new_car('Acura', 1990)
 
 #8 Generate a list of all even numbers between 4 and 30
+def fun8():
+    fun = list(range(4, 31))
+    run = []
+    for num in fun:
+        if num % 2 == 0:
+            run.append(num)
+    print(run)
+fun8()
+
+def fun9():
+    x = [4, 6, 8, 24, 12, 2]
+    print(max(x))
+fun9()
