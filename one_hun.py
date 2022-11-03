@@ -37,7 +37,7 @@ divisor = list(range(1, cpy_num))
 div_list = [x for x in divisor if cpy_num % x == 0]
 print(div_list)
 
-#ex 6
+#ex 6 ref ex 10
 print('\n sharing common from 2 lists into 1')
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -88,6 +88,7 @@ def playAgainfunc():
         print("Good bye!")
 playAgainfunc()
 
+#ex 9
 def guessing_game():
     num_nine = random.randint(1, 9)
     pick = input("Select one number 0 - 9: ")
@@ -113,8 +114,14 @@ def playAgainfunct():
         print("Good bye!")
 playAgainfunct()
 
-
+#ex 10 ref ex 6
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c = [x for x in a if x in b]
 print(c)
+
+#ex 11
+def prime(cpy_num):
+    num = 6 * cpy_num + 1
+    print(f"{num}: is a prime number")
+prime(cpy_num)
