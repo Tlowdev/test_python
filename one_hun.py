@@ -125,3 +125,40 @@ def prime(cpy_num):
     num = 6 * cpy_num + 1
     print(f"{num}: is a prime number")
 prime(cpy_num)
+
+#ex 12
+print("first and last element in list")
+a = [5, 10, 15, 20, 25]
+b = [a[i] for i in (0, -1)]
+print(b)
+#ex 13
+
+#ex 14
+print('rm doubles from string')
+def rm_oc():
+   a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+   b = []
+   for x in a:
+    if x not in b:
+        b.append(x)
+   print(b)
+rm_oc()
+#converts list to set and back to order list
+print('rm doubles from string using set()')
+def set_to_rm():
+    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    b = set(a)
+    c = list(b)
+    c.sort()
+    print(c)
+set_to_rm()
+
+#ex 15
+print('\nreverse sentence')
+dude = "dude, where's your car, where's your car dude."
+def reverse_str(dude):
+     return ' '.join(dude.split()[::-1])
+if __name__ == "__main__":
+    input = dude
+    print (reverse_str(input))
+reverse_str(dude)
