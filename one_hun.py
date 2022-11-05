@@ -1,5 +1,6 @@
 #simple prog that give the year you turn 100
 import random
+import array
 
 #ex 1
 name = input('What is your name? ')
@@ -162,3 +163,27 @@ if __name__ == "__main__":
     input = dude
     print (reverse_str(input))
 reverse_str(dude)
+
+#ex 16 random password with length 15
+length = 15
+digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+capital = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+lower_case = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+symbol = ['!', '@', '#', '$', '%', '^', '&', '*']
+password_leng = digits + capital + lower_case + symbol
+rand_digits = random.choice(digits)
+rand_capital = random.choice(capital)
+rand_lowercase = random.choice(lower_case)
+rand_symbol = random.choice(symbol)
+temp_pass = rand_digits + rand_capital + rand_lowercase + rand_symbol
+for x in range(length - 4):
+    temp_pass = temp_pass + random.choice(password_leng)
+    temp_pass_list = array.array('u', temp_pass)
+    random.shuffle(temp_pass_list)
+password = ''
+for x in temp_pass_list:
+    password = password + x
+print(password)
+
