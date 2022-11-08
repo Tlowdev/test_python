@@ -134,16 +134,16 @@ b = [a[i] for i in (0, -1)]
 print(b)
 
 #ex 13
-print(f'Fibonacci up to {cpy_num} you selected')
+print(f'Fibonacci up to {cpy_num}')
 def fibonacci(cpy_num):
     a, b = 0, 1
     while a < cpy_num:
-        print(a)
+        print(a, end= ',')
         a, b = b, a + b
 fibonacci(cpy_num)
 
 #ex 14
-print('rm doubles from list')
+print('\nrm doubles from list')
 def rm_oc():
    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
    b = []
