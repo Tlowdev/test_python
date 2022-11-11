@@ -1,0 +1,26 @@
+
+# Write a function that is given a string and returns a boolean indicating
+# whether that string has balanced parentheses. The string may have
+# characters other than parentheses, and should be ignored. e.g. 'x()' is
+# balanced. '(b())' is balanced, ')()(' is not.
+
+#'a(b(c)c)d'
+
+#function(string):
+#   i = 0
+#   loop (string as char):
+#       if i < 0:
+#           return False
+#       if char == '(':
+#           i += 1
+#       if char == '):
+#           i -= 1
+#
+#   return i == 0
+
+#print("Expected True got: " + ('True' if is_balanced('a(b(c)dc)') else 'False') + "\n")
+#print("Expected True got: " + ('True' if is_balanced('(())') else 'False') + "\n")
+
+
+
+
