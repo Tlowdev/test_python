@@ -19,7 +19,7 @@ def latest_version(str1: str, str2: str) ->int:
     for s1, s2 in zip_longest(v1, v2, fillvalue=0):
         if s1 == s2:
             continue
-        return -1 if s1 < s2 else 1
+        return False if s1 < s2 else True
     return 0
 print(latest_version(s1, s2))
 print(latest_version(s3, s4)) 
