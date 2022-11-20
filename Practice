@@ -58,7 +58,22 @@ print(latest_version(s1, s6))
 # alphabetic letters should be considered in deciding whether the string is a
 # palindrome. So, for example, 'aba' is a palindrome, but so is '..a$$b(a'.
 # 'damn, I'm Adam' is a palindrome. 'dadax' is not.
-
+tr1 = 'aba'
+str2 = '..A$$b(a'
+str3 = "damn, I'm Adam"
+str4 = 'dadax'
+str5 = "Sir, I demand, I am a maid named Iris."
+def check_pal(str):
+    str = str.lower()
+    pal = ''
+    for ch in str:
+        if ch.isalpha():
+            pal += ch
+    rev = pal[::-1]
+    if rev == pal:
+        return True
+    return False
+print(check_pal(str4))
 
 
 
