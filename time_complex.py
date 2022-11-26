@@ -33,11 +33,22 @@ def loop():
 # Logarithmic time complexity
 # When an algorithm lowers the amount of input
 # in each step o(log n)
-# Binary search trees and binary search functions
-
-#
-#
-#
+# Binary search trees and binary search functions are Logarithmic
+def binary_search(arr, l, r, x):
+    if r >= l:
+        mid = l + (r - l) // 2
+# If element is located at mid
+        if arr[mid] == x:
+            return mid
+# If element is smaller than mid
+        elif arr[mid] > x:
+            return binary_search(arr, l, mid - 1, x)
+# If element is greater than mid
+        else:
+            return binary_search(arr, l, mid+1, r, x)
+# If element was not found
+    else:
+        return -1
 
 
 # quadratic time complexity
